@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/A.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="headert">
+                <p>Front-End Devpoloper UI/UX</p>
+                <h1>I'm Abhiram Vakil</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1"><img src="images/20230829_131156-01-01-01.jpeg" alt="MyPic"></div>
+                <div class="about-col-2">
+                    <h1 class="sub">About Me</h1>
+                    <p>A Tech enthusiast with a zeal to explore and tweak Android and other OSs. Also a Front End Devpoloper with a great passion to build responsive websites.</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-cont active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web Interface</li>
+                            <li><span>Front-End Devolopment</span><br>Building User Interface</li>
+                            <li><span>Music Production</span><br>DAW (FL studio)</li>
+                            <li><span>Template Designing</span><br>Using Canva</li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont" id="experience">
+                        <ul>
+
+                        </ul>
+                    </div>
+                    <div class="tab-cont" id="education">
+                        <ul>
+                            <li><span>B Tech</span><br>Computer Science & Engineering</li>
+                            <li><span>Higher seconadary Education</span><br>Computer Science</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub">My sevices</h1>
+            <div class="services-list">
+                <div>
+                    <img src="images/code-s-slash-fill.svg" alt="logo">
+                    <h2>Front-End Devolopment</h2>
+                    <p>Building responsive static websites using a bled of HTML,CSS & JS.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <img src="images/quill-pen-line.svg" alt="logo">
+                    <h2>UI/UX Designing</h2>
+                    <p>Designing attractive and userfriendly websites for an aesthetic experience.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <img src="images/palette-fill.svg" alt="logo">
+                    <h2>Template Designing</h2>
+                    <p>Designing and builind amazing templates useing Canva.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/online-calculator-illustration-concept-vector.jpg" >
+                    <div class="layer">
+                        <h3>Online Calculator</h3>
+                        <p>A simple calculator with all bacic arithmetic functions.</p>
+                        <a href=""><img src="images/external-link-fill.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub">Contact Me</h1>
+                    <p><img src="images/send-plane-fill (1).svg" alt="">abhiramvakil@gmail.com</p>
+                    <p></p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/abhiram_vakil/"><img src="images/instagram-line.svg" alt=""></a>
+                        <a href="https://www.linkedin.com/in/abhiram-vakil"><img src="images/linkedin-box-fill.svg" alt=""></a>
+                        <a href="https://github.com/Abhiram-Vakil"><img src="images/github-fill.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright © Abhiram Vakil</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabconts = document.getElementsByClassName("tab-cont");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcont of tabconts){
+                tabcont.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
+</body>
+</html>
